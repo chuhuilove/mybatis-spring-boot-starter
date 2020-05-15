@@ -250,6 +250,10 @@ public class MybatisAutoConfiguration implements InitializingBean {
   /**
    * If mapper registering configuration or mapper scanning configuration not present, this configuration allow to scan
    * mappers based on the same component-scanning path as Spring Boot itself.
+   *
+   * 如果不存在映射器注册配置或映射器扫描配置,
+   * 则此配置允许基于与Spring Boot本身相同的组件扫描路径来扫描映射器.
+   *
    */
   @org.springframework.context.annotation.Configuration
   @Import(AutoConfiguredMapperScannerRegistrar.class)

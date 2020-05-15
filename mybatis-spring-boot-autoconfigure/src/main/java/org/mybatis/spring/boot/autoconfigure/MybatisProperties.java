@@ -31,7 +31,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
 /**
- * Configuration properties for MyBatis.
+ *  MyBatis的配置属性
  *
  * @author Eddú Meléndez
  * @author Kazuki Shimizu
@@ -44,17 +44,17 @@ public class MybatisProperties {
   private static final ResourcePatternResolver resourceResolver = new PathMatchingResourcePatternResolver();
 
   /**
-   * Location of MyBatis xml config file.
+   *本地MyBatis xml 配置文件
    */
   private String configLocation;
 
   /**
-   * Locations of MyBatis mapper files.
+   * 本地MyBatis mapper 文件
    */
   private String[] mapperLocations;
 
   /**
-   * Packages to search type aliases. (Package delimiters are ",; \t\n")
+   * 用于搜索类型别名的包.(包分隔符是",; \t\n")
    */
   private String typeAliasesPackage;
 
@@ -70,28 +70,27 @@ public class MybatisProperties {
   private String typeHandlersPackage;
 
   /**
-   * Indicates whether perform presence check of the MyBatis xml config file.
+   * 指示是否执行MyBatis xml配置文件的状态检查.
    */
   private boolean checkConfigLocation = false;
 
   /**
-   * Execution mode for {@link org.mybatis.spring.SqlSessionTemplate}.
+   *{@link org.mybatis.spring.SqlSessionTemplate}的执行模式.
    */
   private ExecutorType executorType;
 
   /**
-   * The default scripting language driver class. (Available when use together with mybatis-spring 2.0.2+)
+   * 默认脚本语言驱动程序类.(可与mybatis-spring 2.0.2+一起使用)
    */
   private Class<? extends LanguageDriver> defaultScriptingLanguageDriver;
 
   /**
-   * Externalized properties for MyBatis configuration.
+   * MyBatis配置的外部属性.
    */
   private Properties configurationProperties;
 
   /**
-   * A Configuration object for customize default settings. If {@link #configLocation} is specified, this property is
-   * not used.
+   * 用于自定义默认设置的配置对象.如果已经指定{@link #configLocation},则不使用此属性.
    */
   @NestedConfigurationProperty
   private Configuration configuration;
